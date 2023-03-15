@@ -170,6 +170,20 @@ p {
     
   } 
 
+  /* Link 5 */
+  a.five:link, a.five:visited {
+
+    text-decoration: none;
+    color: var(--a1-tc);
+ 
+  }
+
+  a.five:hover, a.five:active {
+    
+    color: var(--a1-bgc);
+    text-decoration: none;
+  } 
+
   picture{
     float: right;
   }
@@ -211,6 +225,10 @@ ul.daten{
   overflow: hidden;
   margin: 0;
   
+}
+
+ul.daten2 {
+  color: var(--ah3-tc);
 }
 
 
