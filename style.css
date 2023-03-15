@@ -4,10 +4,24 @@
    
     --text-shadow: 2px 2px rgb(239, 136, 155);
     --border-color: rgb(239, 136, 155);
+
+    /* Links */
     --a1-bgc: rgb(239, 136, 155);
-    --ah1-bgc: rgb(239, 60, 93);
-    --a2-bgc: rgb(56, 56, 56);
-    --ah2-bgc: rgb(239, 136, 155);
+    --a1-tc: black;
+    
+
+    --a2-bgc: rgb(239, 136, 155);
+    --ah2-bgc: rgb(239, 60, 93);
+
+    
+    /* Oben / Unten */
+
+    --bgc-oben-unten: rgb(56, 56, 56);
+    --a3-bgc: rgb(56, 56, 56);
+    --ah3-bgc: rgb(239, 136, 155);
+    --a3-tc: white;
+    --ah3-tc: black;
+  
 }
 
 .darkTheme{
@@ -16,11 +30,24 @@
   --text-color: white;
  
   --text-shadow: 2px 2px rgb(16,119,100);
-  --border-color: rgb(16, 119, 100);
-  --a1-bgc: rgb(16,119,100);
-  --ah1-bgc: rgb(16,195,162);
-  --a2-bgc: white;
+  --border-color: rgb(16,195,162);
+
+   /* Links */
+  --a1-bgc: rgb(16,195,162);
+  --a1-tc: white;
+
+  --a2-bgc: rgb(16,119,100);
   --ah2-bgc: rgb(16,195,162);
+  
+
+  /* Oben / Unten */
+
+  --bgc-oben-unten: rgb(16,119,100);
+  --a3-bgc: rgb(16,119,100);
+  --ah3-bgc: rgb(16,195,162);
+  --a3-tc: white;
+  --ah3-tc: white;
+  
 }
 
 
@@ -82,8 +109,8 @@ p {
 /* LINK 1*/
   a.one:link, a.one:visited {
     background-color: var(--a1-bgc);
-    color: white;
-    border-radius: 25px;
+    color: var(--a1-tc);
+    
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -91,14 +118,12 @@ p {
 
   }
 
-  a.one:hover, a.one:active {
-    background-color: var(--ah1-bgc);
-  } 
+ 
 
 /* LINK 2*/
   a.two:link, a.two:visited {
    
-    background-color:var(--a1-bgc);
+    background-color:var(--a2-bgc);
     color: white;
     padding: 5px 10px;
     text-align: center;
@@ -107,13 +132,13 @@ p {
   }
 
   a.two:hover, a.two:active {
-    background-color:var(--ah1-bgc);
+    background-color:var(--ah2-bgc);
   } 
 /* LINK 3*/
   a.three:link, a.three:visited {
 
-    background-color:var(--a2-bgc);
-    
+    background-color:var(--a3-bgc);
+    color: var(--a3-tc);
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -121,14 +146,17 @@ p {
   }
 
   a.three:hover, a.three:active {
-    background-color:var(--ah2-bgc);
-   
+    
+    background-color:var(--ah3-bgc);
+    
+    color: var(--ah3-tc);
+    
     
   } 
 
   a.four:link, a.four:visited {
 
-    background-color:rgb(56, 56, 56);
+    background-color: var(--a3-bgc);
     color: white;
     padding: 7px 5px;
     text-align: center;
@@ -158,7 +186,7 @@ ul.oben{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color:rgb(56, 56, 56);
+  background-color:var(--bgc-oben-unten);
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -166,7 +194,7 @@ ul.oben{
 }
 
 ul.unten{
-  background-color:rgb(56, 56, 56);
+  background-color:var(--bgc-oben-unten);
   list-style-type: none;
   
   padding: 1%;
@@ -202,24 +230,18 @@ li.daten{
 li a {
   display: block;
   
+  
+  color: var(--a3-tc);
   text-align: center; 
   text-decoration: none;
 }
 
 li a:hover{
-  background-color:rgb(239, 136, 155);
-  color: black;
+  background-color: var(--a3h-bgc);
+  
 }
 
-.active{
-  background-color:rgb(239, 136, 155);
-  color: black;
-  
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
+
 
 address {
   color: var(--text-color);
@@ -241,7 +263,7 @@ i {
 
 
 button{
-  background-color:rgb(56, 56, 56);
+  background-color:var(--a3-bgc);
     
     padding: 5px 5px;
     text-align: center;
