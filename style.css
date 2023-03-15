@@ -204,7 +204,7 @@ ul.unten{
 }
 
 ul.daten{
-  background-color:rgb(56, 56, 56);
+  background-color:var(--bgc-oben-unten);
   list-style-type: none;
   
   padding: 1%;
